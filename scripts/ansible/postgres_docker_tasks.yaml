@@ -1,0 +1,69 @@
+---
+- name: Setup postgres for remote machines via Docker
+  hosts: postgresql_server
+  tags: install_psql
+  vars:
+    postgres_version: "13"
+  vars_files: "./inventories/host_vars/postgresql.yml"
+  tasks:
+    - name: Create a .credentials folder for remote machines
+      ansible.builtin.command:
+        cmd: mkdir -p ~/.credentials
+      changed_when: false
+
+    - name: Mount the secrets into the VM
+      ansible.builtin.copy:
+        src: "~/.credentials/{{ secret_password }}"
+        dest: "~/.credentials/{{ secret_password }}"
+        mode: "0400"
+        owner: root
+        group: root
+
+    - name: Create the folder for volumes postgres
+      ansible.builtin.command:
+        cmd: mkdir -p /etc/postgresql/{{ postgres_version }}/data
+      changed_when: false
+
+    - name: Docker run to setup postgres
+      ansible.builtin.shell: |
+        docker run -d --name postgres -e POSTGRES_DB={{ database_name }}
+        {#- -#}
+         -e POSTGRES_HOST_AUTH_METHOD={{ auth_method }}
+        {#- -#}
+         -v /etc/postgresql/{{ postgres_version }}/data:/var/lib/postgresql/data
+        {#- -#}
+         -p 5432:5432
+        {#- -#}
+         {{ postgres_container_version }}
+        docker ps
+      register: shell_output
+      changed_when: false
+
+    - name: View the log of setup postgres
+      ansible.builtin.debug:
+        msg: "{{ shell_output.stdout_lines }}"
+
+- name: Remove postgres container
+  hosts: postgresql_server
+  tags: remove_psql
+  vars:
+    postgres_version: "13"
+  vars_files: "./inventories/host_vars/postgresql.yml"
+  tasks:
+    - name: Turn off the docker container
+      ansible.builtin.shell: |
+        docker rm -f postgres
+        docker volumes rm -f $(docker volumes ls)
+        sleep 3
+        docker ps
+      register: shell_output
+      changed_when: false
+
+    - name: View shell output
+      ansible.builtin.debug:
+        msg: "{{ shell_output.stdout_lines }}"
+
+    - name: Delete the folder mount into container
+      ansible.builtin.command:
+        cmd: rm -rf /etc/postgresql
+      changed_when: false
