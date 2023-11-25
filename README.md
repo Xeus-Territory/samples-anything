@@ -1,6 +1,6 @@
-# Samples-anthing
+# Samples-anything
 
-This is repo for backup scripts, templates, binary or samples about founded or creature by myself
+This is repo for backup scripts, templates, binary or samples about collecting or creating by myself
 
 <div align="center">
     <img src="https://media1.giphy.com/media/3orieS4jfHJaKwkeli/giphy.gif">
@@ -39,4 +39,4 @@ This is repo for backup scripts, templates, binary or samples about founded or c
 
 ---
 ## Conclusions 
-**This is my knowledge about the whatnews when is applied anything else into work, so happily if you want to contributing anything with me. Please request if you want, so happily hacking and setting up anything :rocket::rocket::rocket::rocket::rocket::rocket::rocket:**
+**This is my knowledge about whatnews is applied anything else into work or have experience with, so happily if you want to contributing anything with me. Please request if you want, so happily hacking and setting up anything :rocket::rocket::rocket::rocket::rocket::rocket::rocket:**
