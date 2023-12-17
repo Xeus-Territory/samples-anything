@@ -14,11 +14,13 @@ This is repo for backup scripts, templates, binary or samples about collecting o
 2. **scripts**: **place where to put the sample files of bash scripts or powershell scripts**
     - [bash](./scripts/bash/): *bash script for running in shell bash or linux (Remember put +x for running)*
       - [config_portainer](./scripts/bash/config_portainer.sh): create a tools for create or resetpassword with portainer via container docker
-      - [proactive_pg_db_performance_scanner](./scripts/bash/proactive_pg_db_performance_scanner.sh): create a tools for managing and monitoring your postgresql databases via pg tools
+      - [proactive_pg_db_performance_scanner](./scripts/bash/proactive_pg_db_performance_scanner.sh): create a tools for managing and monitoring your postgresql databases via pg tools (Author: Dmitry)
       - [retrive_file_s3](./scripts/bash/retrive_file_s3.sh): script for getting the data of file from s3 bucket
       - [synchronize_gitlab](./scripts/bash/synchronize_gitlab.sh): script for synchronizing between two folder of gitlab via MR actions
       - [upload_file_to_s3](./scripts/bash/upload_file_s3.sh): script for searching and replace a old file in s3 bucket with a new one
       - [zero_downtime_nginx](./scripts/bash/zero_downtime_nginx.sh): script for doing manipulation task with non't downtime in nginx and provide the function to make it cronjob to automation CD operations
+      - [openvpn-install.sh](https://github.com/Nyr/openvpn-install/blob/master/openvpn-install.sh): Script for setting up openvpn for your selfhosted (1 minutes complete) (Author: [Nyr](https://github.com/Nyr))
+      - [wireguard-install.sh](https://github.com/Nyr/wireguard-install/blob/master/wireguard-install.sh): Script for setting up wireguard vpn for your selfhosted (Author: [Nyr](https://github.com/Nyr))
    - [powershell](./scripts/powershell/): *powershell script for running inside the windows or windows shell linux*
       - [azure_agent_runner](./scripts/powershell/azure_agent_runner.ps1): script for make a image with `packer` to create a agent runner in `Window` machine for `Azure Cloud` with combine something to running automation test with `C#` inside
    - [ansible](./scripts/ansible/): *ansible template for configuration something inside linux or window machine*
@@ -27,7 +29,7 @@ This is repo for backup scripts, templates, binary or samples about collecting o
 
 3. **templates: Putting the tempalate of multiple tools or using for running inside the specify thing**
    - [ci](./templates/ci/): *Puting the templates of CI/CD tools with specify things*
-      - [.gitlab-ci](./templates/ci/.gitlab-ci.yml): `Gitlab CI` use to running the task inside `Gitlab` container - Extend with build image the inside Docker with `Gitlab`
+      - [gitlab-ci](./templates/ci/.gitlab-ci.yml): `Gitlab CI` use to running the task inside `Gitlab` container - Extend with build image the inside Docker with `Gitlab`
    - [grafana_dashboard](./templates/grafana_dashboards/): *Templates of Gr afan Dashboard to specify the Dashboard for monitoring*
       - [Azure PostgreSQL Queries](./templates/grafana_dashboards/Azure%20PostgreSQL%20Queries-1692262468003.json): Dashboard for monitoring the `PostgreSQL` via `pg_tools` have intergrated in `Azure Cloud`
       - [Mongodb Metrics Dashboard](./templates/grafana_dashboards/Mongodb%20Metrics%20Dashboard-1692262571804.json): Dashboard for monitoring the `Metrics` of `MongoDB` with `Exporter` inside the `Kubernetes`
@@ -39,4 +41,4 @@ This is repo for backup scripts, templates, binary or samples about collecting o
 
 ---
 ## Conclusions 
-**This is my knowledge about whatnews is applied anything else into work or have experience with, so happily if you want to contributing anything with me. Please request if you want, so happily hacking and setting up anything :rocket::rocket::rocket::rocket::rocket::rocket::rocket:**
+**This is my knowledge about whatnews is applied anything else into work or have experience with, so happily if you want to contributing anything with me, Please request if you want. I will give huge thanks for another author  (Author name and link will put up in the readme, It is your contribute and i just collection about that). So happily for creating that stuff, feall hacking and setting up anything :rocket::rocket::rocket::rocket::rocket::rocket::rocket:**
