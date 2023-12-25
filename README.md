@@ -21,6 +21,7 @@ This is repo for backup scripts, templates, binary or samples about collecting o
       - [zero_downtime_nginx](./scripts/bash/zero_downtime_nginx.sh): script for doing manipulation task with non't downtime in nginx and provide the function to make it cronjob to automation CD operations
       - [openvpn-install.sh](https://github.com/Nyr/openvpn-install/blob/master/openvpn-install.sh): Script for setting up openvpn for your selfhosted (1 minutes complete) (Author: [Nyr](https://github.com/Nyr))
       - [wireguard-install.sh](https://github.com/Nyr/wireguard-install/blob/master/wireguard-install.sh): Script for setting up wireguard vpn for your selfhosted (Author: [Nyr](https://github.com/Nyr))
+      - [install_nvm](./scripts/bash/install_nvm.sh): Script for installing to easily managing node and npm versions in machine
    - [powershell](./scripts/powershell/): *powershell script for running inside the windows or windows shell linux*
       - [azure_agent_runner](./scripts/powershell/azure_agent_runner.ps1): script for make a image with `packer` to create a agent runner in `Window` machine for `Azure Cloud` with combine something to running automation test with `C#` inside
    - [ansible](./scripts/ansible/): *ansible template for configuration something inside linux or window machine*
