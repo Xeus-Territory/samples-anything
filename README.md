@@ -39,6 +39,9 @@ This is repo for backup scripts, templates, binary or samples about collecting o
       - [default_upstream_ssl](./templates/nginx/default_upstream_ssl.conf): This is configuration for nginx in upstream for `LB` `Proxy` used `Letencrypt` for `SSL`
       - [portainer_with_ssl](./templates/nginx/portainer_with_ssl.conf): This is nginx configuration for setting up of nginx proxy with `Portainer` used `SSL`
       - [zero_downtime_basic_upstream_ssl](./templates/nginx/zero_downtime_basic_upstream_ssl.conf): Zero downtime with nginx configuration to force traffic into new one used `Blue-Green Deployments`
+   - [terminal](./templates/terminal/): *Templates of terminal & shell profile*
+      - [powershell](./templates/terminal/powershell_profile.ps1): Profile of powershell with some optionals
+      - [zsh](./templates/terminal/zsh_profile.sh): Profile of zsh with some optionals 
 
 ---
 ## Conclusions 
