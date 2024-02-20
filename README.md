@@ -1,5 +1,7 @@
 # Samples-anything
 
+## THIS REPO IS ARCHIVED AND WILL NO LONGER BE ABLE UPDATED. ALL THE DATA IS MOVING TO THE NEW VERSION [WIKI REPO - https://github.com/Xeus-Territory/wiki_tech_obsidian_vault](https://github.com/Xeus-Territory/wiki_tech_obsidian_vault)
+
 This is repo for backup scripts, templates, binary or samples about collecting or creating by myself
 
 <div align="center">

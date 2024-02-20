@@ -5,7 +5,7 @@
 # Install before running (Administrator running)        
 # Install-Module PSReadLine -RequiredVersion 2.1.0      
 Import-Module PSReadLine
-Set-PSReadLineOption -PredictionSource Histor
+Set-PSReadLineOption -PredictionSource History
 
 # Shows navigable menu of all options when hitting Tab  
 # Default not need to downloading
